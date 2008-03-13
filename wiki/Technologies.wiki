@@ -1,0 +1,6 @@
+1.  Entity frame work 
+2.  ASP.NET MVC
+3.  WCF Syndication
+4.  WPF
+5.  Linq
+6.  VS.Net 2008 .Net
