@@ -1,0 +1,9 @@
+The application will provide the user with an easy to use interface to view blogs, listen to podcast, and watch video podcast.
+
+The user will be able to subscribe to RSS Feeds for Blogs, Podcast, and video podcast.
+
+The default view will display blog entries from all subscribed blogs sorted by publication date.
+
+The user will be able to control the number of blog entries that are displayed on the main page.
+
+The user interface will allow the user to navigate by tags/categories, dates, and blog source.
