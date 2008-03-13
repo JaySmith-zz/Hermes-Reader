@@ -1,5 +1,6 @@
 List of tools used.
 
+{{
 1.  Resharper
 2.  NUnit, NUnit2Report and TestDriven.Net
 3.  NAnt, NAntContrib and Nant GUI
@@ -8,3 +9,4 @@ List of tools used.
 6.  FxCop
 7.  GoogleCode
 8.  CruiseControl.NET
+}}
