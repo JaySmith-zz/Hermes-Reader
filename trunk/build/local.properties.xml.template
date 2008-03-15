@@ -1,0 +1,22 @@
+﻿<?xml version="1.0"?>
+<properties>
+	<property name="sql.tools.path" value="C:\program files\microsoft sql server\90\tools\binn\" />
+	<property name="osql.connectionstring" value="-E"/>
+	<property name="path.to.runtime.log4net.config" value="${build.artifacts.dir}\log4net.config.xml"/>
+	<property name="sql.command.runner" value="osql.exe"/>
+	<property name="osql.exe"  value="${sql.tools.path}\${sql.command.runner}" />
+	<property name="initial.catalog" value="HermesReader"/>					
+	<property name="config.connectionstring" value="data source=(local);Integrated Security=SSPI;Initial Catalog=${initial.catalog}"/>			
+	<property name="devenv.dir" value="C:\program files (x86)\microsoft visual studio 8\Common7\IDE"/>
+	<property name="asp.net.account" value="NT Authority\Network Service"/>
+	<property name="database.provider" value="System.Data.SqlClient" />
+	<property name="database.path" value="C:\development\databases" />
+	<property name="system.root" value="C:\windows\"/>
+	<property name="virtual.directory.name" value="HermesReader"/>
+	<property name="asp.net.worker.process" value="aspnet_wp.exe"/>
+	<property name="browser.path" value="C:\program files\mozilla firefox"/>
+	<property name="browser.exe" value="firefox.exe"/>
+	<property name="log.file.name" value="HermesReaderLog.txt"/>
+	<property name="log.level" value="DEBUG"/>
+	<property name="dbgenerator.connectionstring" value="Provider=SQLNCLI;${config.connectionstring}"/>
+</properties>

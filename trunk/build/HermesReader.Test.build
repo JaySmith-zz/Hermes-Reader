@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!--EXTERNAL_PROPERTIES: app.config;build.dir;virtual.directory.name;compile.dir;test.common.lib;debug;xunit.unit.test.lib;xunit.unit.test.files;xunit.integration.test.lib;xunit.integration.test.files;watin.test.lib;watin.test.files;product.test.dir;studio.app.config;build.artifacts.dir;thirdparty.tools.dir;thirdparty.lib.dir;store.data.definitions.lib;store.data.common.lib;log4net.config;build.tools.dir;register.ncover;path.coverlib.dll;path.ncover.console;path.xunit.console;coverage.xml.file;coverage.dir;store.lib;run.unit.tests;run.integration.tests;failure;web.ui.dir;path.ncoverexplorer.console;project.name-->
+<project name="HermesReader">
+	<property name="run.unit.tests" value="true"/>
+	<property name="test.with.coverage" value="false"/>
+	<property name="test.without.coverage" value="true"/>
+	
+	<!-- file names-->
+	<property name="test.lib.prefix" value="${project.name}.Test"/>
+	<property name="test.lib" value="${test.lib.prefix}.dll"/>
+	<property name="test.output.file" value="${test.lib.prefix}.Results.xml" />
+	<property name="test.common.lib" value="${test.lib.prefix}.Utility.dll"/>	
+	<!-- end file names-->
+
+	<!-- coverage properties -->
+	<property name="register.ncover" value="false"/>
+	<property name="path.coverlib.dll" value="${build.tools.dir}\ncover\bin\CoverLib.dll"/>
+	<property name="path.xunit.console" value="${thirdparty.tools.dir}\mbunit\bin\MBUnit.Cons.exe"/>
+	<property name="path.ncover.console" value="${build.tools.dir}\ncover\bin\NCover.Console.exe"/>
+	<property name="path.ncoverexplorer.console" value="${build.tools.dir}\ncover.explorer\bin\NCoverExplorer.Console.exe"/>
+	<property name="coverage.xml.file" value="${coverage.dir}\Coverage.xml"/>
+	<property name="fail.onerror" value="true"/>
+	<property name="xunit.console.args" value="/rt:Text /sr /rf:${coverage.dir}"/>
+	<!-- end coverage properties -->
+	
+	<!-- filesets -->
+	<fileset id="test.references.fileset">
+		<include name="${thirdparty.tools.dir}\mbunit\bin\MBUnit.Framework.dll" />
+		<include name="${thirdparty.tools.dir}\rhino.mocks\bin\Rhino.Mocks.dll" />
+		<include name="${thirdparty.tools.dir}\Rhino.Testing\bin\Rhino.Testing.dll" />
+		<include name="${thirdparty.tools.dir}\WatiN\bin\WatiN.Core.dll" />
+		<include name="${thirdparty.tools.dir}\WatiN\bin\Interop.SHDocVW.dll" />
+		<include name="${thirdparty.lib.dir}\Castle\bin\Castle.Core.dll" />
+		<include name="${thirdparty.lib.dir}\Castle\bin\Castle.DynamicProxy2.dll" />
+		<include name="${thirdparty.lib.dir}\Castle\bin\Castle.MicroKernel.dll" />
+		<include name="${thirdparty.lib.dir}\Castle\bin\Castle.Windsor.dll" />
+		<include name="${thirdparty.lib.dir}\log4net\bin\log4net.dll" />
+		<include name="${build.artifacts.dir}\${store.lib}" />
+	</fileset>
+	<!-- end filesets-->
+		
+
+	<target name="test.compile" depends="compile">
+		<csc output="${compile.dir}\${test.lib}" target="library" debug="${debug}">
+			<sources basedir="${product.test.dir}">
+				<include name="**\*.cs"/>
+			</sources>
+			<references refid="test.references.fileset"/>
+		</csc>
+	</target>
+	
+	<target name="setup.studio.test">
+		<property name="path.to.runtime.log4net.config"	value="${product.test.dir}\bin\debug\log4net.config.xml"/>
+		<call target="setup.test"/>
+		<copy file="${app.config}" tofile="${studio.app.config}" />
+	</target>
+
+	<target name="setup.test" depends="test.compile">
+		<copy todir="${build.artifacts.dir}" flatten="true">
+			<fileset refid="test.references.fileset"/>
+		</copy>
+		<copy todir="${build.artifacts.dir}" flatten="true">
+			<fileset basedir="${thirdparty.tools.dir}\mbunit\bin">
+				<include name="*.dll" />
+			</fileset>
+		</copy>
+
+		<copy todir="${build.artifacts.dir}" flatten="true">
+			<fileset>
+				<include name="${thirdparty.lib.dir}\log4net\bin\*.dll" />
+			</fileset>
+		</copy>
+
+		<property name="target" value="${log4net.config}"/>
+		<call target="expand.template.file"/>
+
+		<echo message="path.to.runtime.log4net.config : ${path.to.runtime.log4net.config}"/>
+		<echo message="log4net.config : ${log4net.config}"/>
+		<copy file="${log4net.config}"
+			  tofile="${path.to.runtime.log4net.config}"/>
+
+		<property name="target" value="${app.config}"/>
+		<call target="expand.template.file"/>
+
+
+		<copy file="${app.config}"
+			  tofile="${build.artifacts.dir}\${test.lib}.config" />		
+
+		<property name="target.dir" value="${build.artifacts.dir}"/>
+	</target>	
+
+	<target name="_run.tests" depends="setup.test">
+		<loadtasks assembly="${build.tools.dir}\nant\bin\NAnt.Contrib.Tasks.dll"/>
+		<loadtasks assembly="${build.tools.dir}\ncover.explorer.extras\bin\NCoverExplorer.NAntTasks.dll"/>
+		<echo message="Starting MBUnit code coverage run..."/>
+		<property name="test.failed" value="false"/>
+		<property name="fail.message" value=""/>
+
+		<if test="${register.ncover}">
+			<property name="target" value="${path.coverlib.dll}"/>
+			<call target="register.dll"/>
+		</if>
+		<if test="${test.with.coverage}">
+			<trycatch>
+				<try>
+					<ncover program="${path.ncover.console}"
+							commandLineExe="${path.xunit.console}"
+							commandLineArgs="${build.artifacts.dir}\${test.lib} ${xunit.console.args}"
+							coverageFile="${coverage.xml.file}"
+							workingDirectory="${coverage.dir}">
+						<assemblies>
+							<include name="${build.artifacts.dir}\${store.lib}"/>
+							<include name="${build.artifacts.dir}\${test.lib}"/>
+						</assemblies>
+					</ncover>
+				</try>
+				<catch property="failure">
+					<echo message="One or more tests failed: ${failure}"/>
+					<property name="fail.message" value="${failure}"/>
+					<property name="test.failed" value="true"/>
+				</catch>
+			</trycatch>
+			<if test="${register.ncover}">
+				<property name="target" value="${path.coverlib.dll}"/>
+				<call target="unregister.dll"/>
+			</if>
+			<call target="util.ncoverexplorer.nant"/>
+			<fail if="${fail.onerror and test.failed}" message="One or more tests failed under code coverage.\r\n${fail.message}"/>
+			<exec program="NCoverExplorer.exe"
+				  basedir="${build.tools.dir}\ncover.explorer\bin"
+				  workingdir="${coverage.dir}"
+				  commandline="coverage.xml"/>
+		</if>
+		<if test="${test.without.coverage}">
+			<exec program="${path.xunit.console}"
+				  commandline="${build.artifacts.dir}\${test.lib} ${xunit.console.args}"
+				  workingdir="${build.artifacts.dir}"/>
+			
+		</if>
+	</target>
+
+	<target name="test.all.woc">
+		<property name="run.integration.tests" value="true"/>
+		<property name="test.with.coverage" value="false"/>
+		<property name="test.without.coverage" value="true"/>
+		<call target="_run.tests"/>
+	</target>
+
+	<target name="test.all.wc">
+		<property name="run.integration.tests" value="true"/>
+		<property name="test.with.coverage" value="true"/>
+		<property name="test.without.coverage" value="false"/>
+		<call target="_run.tests"/>
+	</target>
+
+	<target name="test">		
+		<call target="_run.tests"/>
+	</target>
+
+	<target name="register.dll">
+		<exec program="regsvr32"
+			  basedir="${environment::get-folder-path('System')}"
+			  workingdir="${thirdparty.tools.dir}\ncover\bin"
+			  commandline="/s ${target}"/>
+	</target>
+
+	<target name="prep.studio.run">
+		<property name="target" value="${app.config}"/>
+		<call target="expand.template.file"/>
+		<copy file="${app.config}" tofile="${web.ui.dir}\Web.config"/>
+	</target>
+
+	<target name="test.html">
+		<property name="xunit.console.args" value="/report-type:Html /sr /report-folder:${coverage.dir}"/>
+		<property name="run.integration.tests" value="true"/>
+		<property name="test.with.coverage" value="false"/>
+		<property name="test.without.coverage" value="true"/>
+		<call target="test"/>
+	</target>
+
+	<target name="unregister.dll">
+		<exec program="regsvr32"
+			  basedir="${environment::get-folder-path('System')}"
+			  workingdir="${thirdparty.tools.dir}\ncover\bin"
+			  commandline="/u /s ${target}"/>
+	</target>
+
+	<target name="util.ncoverexplorer.nant">
+		<echo message="Starting NCoverExplorer report generation..."/>
+		<ncoverexplorer program="${path.ncoverexplorer.console}"
+					projectName="NCoverExplorer"
+					reportType="4"
+					outputDir="${coverage.dir}"
+					xmlReportName="CoverageReport.xml"
+					htmlReportName="CoverageReport.html"
+					mergeFileName="CoverageMerge.xml"
+					showExcluded="True"
+					satisfactoryCoverage="80" >
+			<fileset>
+				<include name="${coverage.xml.file}"/>
+			</fileset>
+			<exclusions>
+				<exclusion type="Assembly" pattern="*Test*" />
+				<exclusion type="Namespace" pattern="HermesReader.DataAccess.Mapping.TableDefinitions" />
+			</exclusions>
+			<!--
+			<moduleThresholds>
+				<moduleThreshold moduleName="MyAssembly.dll" satisfactoryCoverage="30" />
+			</moduleThresholds>-->
+		</ncoverexplorer>
+	</target>
+</project>

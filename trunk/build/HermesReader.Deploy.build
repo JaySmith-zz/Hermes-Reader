@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Copyright (c) 2007 Jean-Paul S. Boodhoo (http:www.jpboodhoo.com)-->
+<!---->
+<!--Permission is hereby granted, free of charge, to any person obtaining a copy-->
+<!--of this software and associated documentation files (the 'Software'), to deal-->
+<!--in the Software without restriction, including without limitation the rights-->
+<!--to use, copy, modify, merge, publish, distribute, sublicense, and/or sell-->
+<!--copies of the Software, and to permit persons to whom the Software is-->
+<!--furnished to do so, subject to the following conditions:-->
+<!---->
+<!--The above copyright notice and this permission notice shall be included in-->
+<!--all copies or substantial portions of the Software.-->
+<!---->
+<!--THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR-->
+<!--IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,-->
+<!--FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE-->
+<!--AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER-->
+<!--LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,-->
+<!--OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN-->
+<!--THE SOFTWARE.-->
+
+<!--EXTERNAL_PROPERTIES: app.config;build.dir;virtual.directory.name-->
+<project name="HermesReader">
+	<property name="deploy.dir" value="${build.dir}\deploy"/>
+	<property name="dist.dir" value="${deploy.dir}\dist"/>	
+	<property name="run.url" value="http://${environment::get-machine-name()}/${virtual.directory.name}/Default.store"/>
+
+  <target name="web.clean" >
+	<delete dir="${dist.web.dir}"/>
+  </target>
+
+	<target name="web.init" depends="web.clean" >
+		<mkdir dir="${dist.web.dir}\source\bin" />
+		<mkdir dir="${dist.web.dir}\app" />
+	</target>
+
+  <target name="expand.deploy.files">
+    <property name="path.to.runtime.log4net.config" value="${deploy.dir}\web\app\log4net.config.xml"/>
+    <property name="target" value="${app.config}"/>
+    <call target="expand.template.file"/>
+    <property name="target" value="${log4net.config}"/>
+    <call target="expand.template.file"/>
+    <!--		<property name="target" value="${global.asax}"/>-->
+    <!--		<call target="expand.template.file"/>-->
+  </target>
+
+  <target name="dist.web.local" depends="expand.deploy.files">
+    <property name="dist.web.dir" value="${deploy.dir}\web" />
+    <property name="deploy.compile.dir" value="${deploy.dir}" />    
+    <call target="dist.web" />
+  </target>
+
+  <target name="deploy.compile" depends="init">
+    <property name="compile.dir" value="${deploy.dir}" />
+    <call target="compile"/>
+  </target>
+
+  <target name="prep.dist.web" depends="web.init" >
+    <copy todir="${dist.web.dir}\source\bin" flatten="true">
+      <fileset>
+        <include name="${deploy.dir}\${store.lib}" />
+        <include name="${log4net.lib}"/>
+      </fileset>
+    </copy>
+
+    <copy tofile="${dist.web.dir}\source\web.config" file="${app.config}"/>
+    <echo message="path.to.runtime.log4net.config : ${path.to.runtime.log4net.config}"/>
+    <echo message="log4net.config : ${log4net.config}"/>
+    <echo message="dist.web.dir : ${dist.web.dir}"/>
+    
+    <copy file="${log4net.config}" tofile="${dist.web.dir}\source\log4net.config.xml"/>
+    <!--		<copy todir="${dist.web.dir}\source" file="${global.asax}"/>-->
+   
+    <copy todir="${dist.web.dir}\source" flatten="true">
+      <fileset>
+        <include name="${web.ui.dir}\*.*" />
+        <exclude name="${web.ui.dir}\bin\*.*" />
+        <exclude name="${web.ui.dir}\web.config" />
+        <exclude name="${web.ui.dir}\css\*.*" />
+        <exclude name="${web.ui.dir}\js\*.*" />
+      </fileset>
+    </copy>
+
+    <copy todir="${dist.web.dir}\source\images" flatten="true">
+      <fileset>
+        <include name="${web.ui.dir}\images\*.*" />
+      </fileset>
+    </copy>
+  </target>
+
+  <target name="dist.web" depends="deploy.compile, prep.dist.web">
+		<exec program="aspnet_compiler.exe"
+			  basedir="C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727"
+			  workingdir="${dist.web.dir}\source"
+			  commandline="-v /${virtual.directory.name} -p ${dist.web.dir}\source ${dist.web.dir}\app"  />
+	</target>
+  
+	<target name="run" depends="dist.web.local">
+		<exec program="${browser.exe}"
+			  basedir="${browser.path}"
+			  commandline="${run.url}" />
+		<exec program="taskkill.exe"
+			  basedir="${environment::get-folder-path('System')}"
+			  commandline="/F /IM ${asp.net.worker.process}"/>
+	</target>
+			
+</project>

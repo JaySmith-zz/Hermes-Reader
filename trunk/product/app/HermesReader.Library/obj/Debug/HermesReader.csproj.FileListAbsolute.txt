@@ -1,0 +1,5 @@
+D:\Development\HermesReader\product\app\HermesReader\bin\Debug\HeremesReader.Library.dll
+D:\Development\HermesReader\product\app\HermesReader\bin\Debug\HeremesReader.Library.pdb
+D:\Development\HermesReader\product\app\HermesReader\obj\Debug\ResolveAssemblyReference.cache
+D:\Development\HermesReader\product\app\HermesReader\obj\Debug\HeremesReader.Library.dll
+D:\Development\HermesReader\product\app\HermesReader\obj\Debug\HeremesReader.Library.pdb

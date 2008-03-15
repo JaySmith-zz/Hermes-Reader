@@ -1,0 +1,5 @@
+C:\Users\Jay.Smith\Documents\Visual Studio 2008\Projects\Hermes Reader\product\app\HeremesReader.Library\bin\Debug\HeremesReader.Library.dll
+C:\Users\Jay.Smith\Documents\Visual Studio 2008\Projects\Hermes Reader\product\app\HeremesReader.Library\bin\Debug\HeremesReader.Library.pdb
+C:\Users\Jay.Smith\Documents\Visual Studio 2008\Projects\Hermes Reader\product\app\HeremesReader.Library\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jay.Smith\Documents\Visual Studio 2008\Projects\Hermes Reader\product\app\HeremesReader.Library\obj\Debug\HeremesReader.Library.dll
+C:\Users\Jay.Smith\Documents\Visual Studio 2008\Projects\Hermes Reader\product\app\HeremesReader.Library\obj\Debug\HeremesReader.Library.pdb

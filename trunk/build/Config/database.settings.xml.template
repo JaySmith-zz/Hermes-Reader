@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<obj name="Table Generator" uid="ae2af1bd-23eb-4489-91b0-60cae16adc95" path="tableclassgen.csgen">
+  <items>
+    <item name="__dbConnectionString" type="System.String" val="@dbgenerator.connectionstring@" />
+    <item name="__dbDriver" type="System.String" val="SQL" />
+    <item name="__dbLanguageMappingFileName" type="System.String" val="Settings\Languages.xml" />
+    <item name="__dbTarget" type="System.String" val="SqlClient" />
+    <item name="__dbTargetMappingFileName" type="System.String" val="Settings\DbTargets.xml" />
+    <item name="__language" type="System.String" val="C#" />
+    <item name="databaseName" type="System.String" val="@initial.catalog@" />
+    <item name="dbConnectionString" type="System.Boolean" val="True" />
+    <item name="dbDriver" type="System.String" val="SQL" />
+  </items>
+</obj>
