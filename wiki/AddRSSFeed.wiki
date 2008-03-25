@@ -2,9 +2,9 @@
 
 As a [ User ]
 
-I want to [Behavior]
+I want to [ Behavior ]
 
-So that [Business Value]
+So that [ Business Value ]
 
 Example:
 
@@ -16,10 +16,10 @@ So that I can buy stuff with the cash
 
 =Scenario=
 
-Given a [Context]
+Given a [ Context ]
 
-When I [Specification]
+When I [ Specification ]
 
-Then [Expectation]
+Then [ Expectation ]
 
 Example:
