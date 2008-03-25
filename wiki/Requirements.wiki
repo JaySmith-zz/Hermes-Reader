@@ -12,7 +12,7 @@ The user interface will allow the user to navigate by tags/categories, dates, an
 =Requirements List=
 _The following items can be a start for creating more detailed Use Cases.  These Items will decompose into more clearly defined Use Cases and Scenarios_:
 
-* [AddRSSFeed Add RSS feed]
+* [AddRSSFeed Add RSS Feed]
 
 * Delete RSS Feed
 
