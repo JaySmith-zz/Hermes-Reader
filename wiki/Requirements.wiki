@@ -10,21 +10,38 @@ The user will be able to control the number of blog entries that are displayed o
 The user interface will allow the user to navigate by tags/categories, dates, and blog source.
 
 =Requirements List=
-_The following items can be a start for creating more detailed Use Cases.  These Items will decompose into more clearly defined Use Cases and Scenarios_
-Add RSS feed
-Delete RSS Feed
-Update RSS Feed
-Display RSS Feed Items By Pubication Date
-Display Filtered RSS Feeds By Tag/Category
-Display Filtered RSS Feeds By Publication Date
-Display Filtered RSS Feeds By Feed Source
-Display Feed Item Calender
-Display RSS Feed Item
-Display Tag Cloud
-Display Blog Roll
-Display RSS Aggregated Feed Information
-Administrator Logon
-Add Administrator
-Delete Administrator
-Disable Administrator
-Subscribe to Aggregated Feed
+_The following items can be a start for creating more detailed Use Cases.  These Items will decompose into more clearly defined Use Cases and Scenarios_:
+
+* Add RSS feed
+
+* Delete RSS Feed
+
+* Update RSS Feed
+
+* Display RSS Feed Items By Pubication Date
+
+* Display Filtered RSS Feeds By Tag/Category
+
+* Display Filtered RSS Feeds By Publication Date
+
+* Display Filtered RSS Feeds By Feed Source
+
+* Display Feed Item Calender
+
+* Display RSS Feed Item
+
+* Display Tag Cloud
+
+* Display Blog Roll
+
+* Display RSS Aggregated Feed Information
+
+* Administrator Logon
+
+* Add Administrator
+
+* Delete Administrator
+
+* Disable Administrator
+
+* Subscribe to Aggregated Feed
