@@ -1,0 +1,25 @@
+=User Story=
+
+As a [User]
+
+I want to [Behavior]
+
+So that [Business Value]
+
+Example:
+
+As a Customer
+
+I want to withdraw money from my account
+
+So that I can buy stuff with the cash
+
+=Scenario=
+
+Given a [Context]
+
+When I [Specification]
+
+Then [Expectation]
+
+Example:
