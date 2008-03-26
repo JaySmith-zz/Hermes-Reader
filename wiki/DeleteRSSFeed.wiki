@@ -2,8 +2,8 @@
 
 As an Administrator
 
-I want to update a feed
+I want to delete a feed
 
-So that the Name or URL can be updated
+So that the post from the feed are no longer displayed on the site
 
 [Requirements Back To Requirements]
