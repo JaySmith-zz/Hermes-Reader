@@ -1,18 +1,10 @@
 =User Story=
 
-As a [ User ]
+As a Administrator
 
-I want to [ Behavior ]
+I want to Add a new feed
 
-So that [ Business Value ]
-
-Example:
-
-As a Customer
-
-I want to withdraw money from my account
-
-So that I can buy stuff with the cash
+So that post from the feed will be displayed on the site
 
 =Scenario=
 
