@@ -8,7 +8,7 @@ _The following items can be a start for creating more detailed Use Cases.  These
 
 * [UpdateSSFeed Update RSS Feed]
 
-* Display RSS Feed Items By Pubication Date
+* [DisplayRSSFeedItemsByPubDate Display RSS Feed Items By Pubication Date]
 
 * Display Filtered RSS Feeds By Tag/Category
 
