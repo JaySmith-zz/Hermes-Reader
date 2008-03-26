@@ -1,0 +1,7 @@
+#Delete RSS Feed User Story
+
+As an Administrator
+
+I want to update a feed
+
+So that the Name or URL can be updated
