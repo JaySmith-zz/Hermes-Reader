@@ -12,6 +12,7 @@ Resources:
 = Behavior Driven Design =
 Resources:
   * [http://dannorth.net/introducing-bdd Introducing BDD - Dan North]
+  * [http://behaviour-driven.org/ Behavior Driven Design]
 
 = Test Driven Design = 
 Resources:
