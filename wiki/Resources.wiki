@@ -15,6 +15,6 @@ Add your content here.  Format your content with:
 
 = Behavior Driven Design =
 Resources:
-  * [http://dannorth.net/introducing-bdd]Introducing BDD - Dan North 
+  * [http://dannorth.net/introducing-bdd Introducing BDD - Dan North]
 
 = Test Driven Design = 
