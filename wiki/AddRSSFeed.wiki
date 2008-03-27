@@ -2,7 +2,7 @@
 
 =User Story=
 
-As a Administrator
+As an Administrator
 
 I want to Add a new feed
 
