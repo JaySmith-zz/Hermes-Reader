@@ -7,14 +7,12 @@ This page will be use to collect links to resources we have read and used on thi
 A user story is a software system requirement formulated as one or two sentences in the everyday language of the user.
 
 Resources:
-  * 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+  * [http://dannorth.net/whats-in-a-story What's In A Story - Dan North]
 
 = Behavior Driven Design =
 Resources:
   * [http://dannorth.net/introducing-bdd Introducing BDD - Dan North]
 
 = Test Driven Design = 
+Resources:
+  * [http://daveastels.com/2005/07/05/a-new-look-at-test-driven-development/ A New Look at Test Driven Development - Dave Astels]
