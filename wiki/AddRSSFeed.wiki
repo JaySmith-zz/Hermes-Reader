@@ -17,3 +17,9 @@ When I [ Specification ]
 Then [ Expectation ]
 
 Example:
+
+Given an Administrator adds a feed
+   And the feed is valid
+When I ?
+Then the feed should be stored
+   And the updated list of feed should be displayed
