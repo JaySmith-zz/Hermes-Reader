@@ -22,4 +22,5 @@ Given an Administrator adds a feed
    And the feed is valid
 When I < What Goes Here > 
 Then the feed should be stored
+
    And the updated list of feed should be displayed
