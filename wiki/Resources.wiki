@@ -1,6 +1,6 @@
 = Introduction =
 
-This page will be use to collect links to resources we have read and used on this project.
+This page will be used to collect links to resources we have read and used on this project.
 
 = User Stories =
 
@@ -13,7 +13,9 @@ Resources:
 Resources:
   * [http://dannorth.net/introducing-bdd Introducing BDD - Dan North]
   * [http://behaviour-driven.org/ Behavior Driven Design]
+  * [http://blog.daveastels.com/files/BDD_Intro.pdf BDD from Dave Astels]
 
 = Test Driven Design = 
 Resources:
   * [http://daveastels.com/2005/07/05/a-new-look-at-test-driven-development/ A New Look at Test Driven Development - Dave Astels]
+  
