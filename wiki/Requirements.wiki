@@ -4,33 +4,18 @@ _The following items can be a start for creating more detailed Use Cases.  These
 
   * [AddRSSFeed Add RSS Feed]
   * [DeleteRSSFeed Delete RSS Feed]
-
-* [UpdateSSFeed Update RSS Feed]
-
-* [DisplayRSSFeedItemsByPubDate Display RSS Feed Items By Pubication Date]
-
-* Display Filtered RSS Feeds By Tag/Category
-
-* Display Filtered RSS Feeds By Publication Date
-
-* Display Filtered RSS Feeds By Feed Source
-
-* Display Feed Item Calender
-
-* Display RSS Feed Item
-
-* Display Tag Cloud
-
-* Display Blog Roll
-
-* Display RSS Aggregated Feed Information
-
-* Administrator Logon
-
-* Add Administrator
-
-* Delete Administrator
-
-* Disable Administrator
-
-* Subscribe to Aggregated Feed
+  * [UpdateSSFeed Update RSS Feed]
+  * [DisplayRSSFeedItemsByPubDate Display RSS Feed Items By Pubication Date]
+  * Display Filtered RSS Feeds By Tag/Category
+  * Display Filtered RSS Feeds By Publication Date
+  * Display Filtered RSS Feeds By Feed Source
+  * Display Feed Item Calender
+  * Display RSS Feed Item
+  * Display Tag Cloud
+  * Display Blog Roll
+  * Display RSS Aggregated Feed Information
+  * [AdminLogon Administrator Logon]
+  * [AdminAddAdministrator Add Administrator]
+  * [AdminDeleteAdminitrator Delete Administrator]
+  * [AdminDisableAdminstrator Disable Administrator]
+  * Subscribe to Aggregated Feed
