@@ -3,8 +3,7 @@
 =User Story=
 
 As an Guest
-
-I want to Logon 
+ I want to Logon 
 
 So that I can administer the site 
 
