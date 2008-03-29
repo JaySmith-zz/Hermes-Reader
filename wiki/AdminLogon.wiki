@@ -12,7 +12,6 @@ So that I can administer the site
 
 Given a valid User Name 
   And a valid Password
-
 When I logon
 
 Then I expect to see the admin functions
