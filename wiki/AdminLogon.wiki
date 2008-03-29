@@ -10,8 +10,8 @@ So that I can administer the site
 
 =Scenario 1=
 
-Given a valid UserName 
-  And a valid password
+Given a valid User Name 
+  And a valid Password
 
 When I logon
 
@@ -19,7 +19,7 @@ Then I expect to see the admin functions
 
 = Scenario 2 =
 
-Given an invalid UserName
+Given an invalid User Name
 
 When I logon
 
