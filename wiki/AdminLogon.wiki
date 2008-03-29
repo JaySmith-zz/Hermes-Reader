@@ -1,0 +1,34 @@
+[Requirements]
+
+=User Story=
+
+As an Guest
+
+I want to Logon
+
+So that I can administer the site
+
+=Scenario 1=
+
+Given a valid UserName 
+  And a valid password
+
+When I logon
+
+Then I expect to see the admin functions
+
+= Scenario 2 =
+
+Given an invalid UserName
+
+When I logon
+
+Then an invalid user message should be displayed
+
+= Scenario 3 =
+
+Given an invalid Password
+
+When a user logs on
+
+Then an invalid password message should be displayed
