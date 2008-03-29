@@ -2,10 +2,6 @@
 
 =User Story=
 
-As a user
-I want to logon
-So that I can administer the site
-
 As an Guest  
 I want to Logon 
 So that I can administer the site`
