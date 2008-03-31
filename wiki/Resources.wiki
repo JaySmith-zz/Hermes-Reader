@@ -22,3 +22,4 @@ Resources:
 = nAnt - Build Tools =
 Resources:
   * [http://www.jpboodhoo.com/blog/NAntStarterSeries.aspx Jean-Paul Boodhoo's NAnt Starter Series]
+  * [http://www.jpboodhoo.com/blog/DirectoryStructureForProjects.aspx Directory Structure for Projects]
