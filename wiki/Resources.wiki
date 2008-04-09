@@ -26,3 +26,4 @@ Resources:
 = MVC ASP .NET Framework =
 Resources:
   * [http://www.manning.com/palermo/ Jeffrey Palermo - ASP .NET MVC In Action Book]
+  * [http://code.google.com/p/codecampserver/ Jeffrey Palermo CodeCampServer MVC Project]
