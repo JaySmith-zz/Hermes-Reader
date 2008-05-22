@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Assemblies Version="1073741831">
+  <Assembly Name="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Image="a3d6440f-b948-492c-aa2e-022c2e2d429e" Timestamp="633450312260000000" XmlDocIndexTimestamp="633265287640000000" />
+  <Assembly Name="System.Data.DataSetExtensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Image="9261e36b-84f5-4631-851c-de685ce9e029" Timestamp="633450312260000000" XmlDocIndexTimestamp="633265287640000000" />
+  <Assembly Name="System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Image="c4cb5b15-cab5-4a11-bd24-f7fd728497a6" Timestamp="633450312260000000" XmlDocIndexTimestamp="633258385180000000" />
+  <Assembly Name="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Image="ab47853e-b888-4784-84bc-370b3c0c0563" Timestamp="633450312260000000" XmlDocIndexTimestamp="633265978000000000" />
+  <Assembly Name="JetBrains.Annotations, Version=4.0.804.16, Culture=neutral, PublicKeyToken=1010a0d8d6380325" Image="a3d89065-cfeb-4727-8368-9e7699383cf4" Timestamp="633467663400000000" XmlDocIndexTimestamp="633467663400000000" />
+  <Assembly Name="System.Web.Abstractions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Image="075994b2-6b12-4afc-82dd-ac535443c126" Timestamp="633397438780000000" />
+  <Assembly Name="System.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Image="e57101d6-d7d1-4b5f-aa8c-0b68a5565822" Timestamp="633397438860000000" />
+  <Assembly Name="System.Web.Routing, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Image="faeb3ab3-b44c-4f33-8bf3-38798abb69ce" Timestamp="633397438800000000" />
+  <Assembly Name="nunit.framework, Version=2.4.6.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77" Image="2a356d21-d10d-407f-b0ff-2f064e1042f1" Timestamp="633347419040000000" />
+  <Assembly Name="Rhino.Mocks, Version=3.5.0.1, Culture=neutral, PublicKeyToken=0b3305902db7183f" Image="5633a7d4-0309-4f61-a8bf-ae19d042cd60" Timestamp="633470189446875000" XmlDocIndexTimestamp="633470190174062500" />
+</Assemblies>
