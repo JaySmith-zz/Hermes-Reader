@@ -1,4 +1,4 @@
-﻿using hermes.Controllers;
+﻿using hermes.web.Controllers;
 using hermes.core.Domain.RssFeedAggregate;
 using NUnit.Framework;
 using Rhino.Mocks;
