@@ -1,0 +1,15 @@
+C:\Documents and Settings\Zach Young\My Documents\Visual Studio 2008\Projects\hermes\hermes\bin\hermes.dll
+C:\Documents and Settings\Zach Young\My Documents\Visual Studio 2008\Projects\hermes\hermes\bin\hermes.pdb
+C:\Documents and Settings\Zach Young\My Documents\Visual Studio 2008\Projects\hermes\hermes\bin\hermes.core.dll
+C:\Documents and Settings\Zach Young\My Documents\Visual Studio 2008\Projects\hermes\hermes\bin\System.Web.Mvc.dll
+C:\Documents and Settings\Zach Young\My Documents\Visual Studio 2008\Projects\hermes\hermes\bin\hermes.core.pdb
+C:\Documents and Settings\Zach Young\My Documents\Visual Studio 2008\Projects\hermes\hermes\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Zach Young\My Documents\Visual Studio 2008\Projects\hermes\hermes\obj\Debug\hermes.dll
+C:\Documents and Settings\Zach Young\My Documents\Visual Studio 2008\Projects\hermes\hermes\obj\Debug\hermes.pdb
+C:\Documents and Settings\Zach Young\My Documents\Visual Studio 2008\Projects\hermesreader\hermes\bin\hermes.dll
+C:\Documents and Settings\Zach Young\My Documents\Visual Studio 2008\Projects\hermesreader\hermes\bin\hermes.pdb
+C:\Documents and Settings\Zach Young\My Documents\Visual Studio 2008\Projects\hermesreader\hermes\bin\hermes.core.dll
+C:\Documents and Settings\Zach Young\My Documents\Visual Studio 2008\Projects\hermesreader\hermes\bin\hermes.core.pdb
+C:\Documents and Settings\Zach Young\My Documents\Visual Studio 2008\Projects\hermesreader\hermes\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Zach Young\My Documents\Visual Studio 2008\Projects\hermesreader\hermes\obj\Debug\hermes.dll
+C:\Documents and Settings\Zach Young\My Documents\Visual Studio 2008\Projects\hermesreader\hermes\obj\Debug\hermes.pdb

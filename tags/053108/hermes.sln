@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hermes", "hermes\hermes.csproj", "{46C5CF45-88C4-4338-BFEF-2267007F4B0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hermes.core", "hermes.core\hermes.core.csproj", "{E06001EE-45A1-41E1-9CEC-ED8CD621F8FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hermes.test", "hermes.test\hermes.test.csproj", "{08EBAB4F-1203-4018-BAAF-F4BA78743D20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hermes.web", "hermes.web\hermes.web.csproj", "{86964D17-B860-49EE-AAF3-72EDE336A5DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46C5CF45-88C4-4338-BFEF-2267007F4B0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46C5CF45-88C4-4338-BFEF-2267007F4B0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46C5CF45-88C4-4338-BFEF-2267007F4B0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46C5CF45-88C4-4338-BFEF-2267007F4B0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E06001EE-45A1-41E1-9CEC-ED8CD621F8FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E06001EE-45A1-41E1-9CEC-ED8CD621F8FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E06001EE-45A1-41E1-9CEC-ED8CD621F8FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E06001EE-45A1-41E1-9CEC-ED8CD621F8FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08EBAB4F-1203-4018-BAAF-F4BA78743D20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08EBAB4F-1203-4018-BAAF-F4BA78743D20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08EBAB4F-1203-4018-BAAF-F4BA78743D20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08EBAB4F-1203-4018-BAAF-F4BA78743D20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86964D17-B860-49EE-AAF3-72EDE336A5DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86964D17-B860-49EE-AAF3-72EDE336A5DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86964D17-B860-49EE-AAF3-72EDE336A5DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86964D17-B860-49EE-AAF3-72EDE336A5DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
