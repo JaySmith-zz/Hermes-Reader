@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Web.Mvc;
 using hermes.core.Domain.RssFeedAggregate;
 
@@ -21,7 +22,8 @@ namespace hermes.Controllers
         public void Index()
         {
             var feeds = _feedRepo.ListAllFeeds();
-            RenderViewWithDataAction("Index", feeds);
+            var sortedFeeds = feeds.OrderByDescending(f => f.PublicationDate);
+            RenderViewWithDataAction("Index", sortedFeeds);
         }
 
         public void About()
