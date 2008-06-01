@@ -1,1 +1,10 @@
 C:\Documents and Settings\Zach Young\My Documents\Visual Studio 2008\Projects\hermesreader\hermes.web\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Zach Young\My Documents\Visual Studio 2008\Projects\hermesreader\hermes.web\bin\hermes.web.dll
+C:\Documents and Settings\Zach Young\My Documents\Visual Studio 2008\Projects\hermesreader\hermes.web\bin\hermes.web.pdb
+C:\Documents and Settings\Zach Young\My Documents\Visual Studio 2008\Projects\hermesreader\hermes.web\bin\hermes.core.dll
+C:\Documents and Settings\Zach Young\My Documents\Visual Studio 2008\Projects\hermesreader\hermes.web\bin\System.Web.Abstractions.dll
+C:\Documents and Settings\Zach Young\My Documents\Visual Studio 2008\Projects\hermesreader\hermes.web\bin\System.Web.Mvc.dll
+C:\Documents and Settings\Zach Young\My Documents\Visual Studio 2008\Projects\hermesreader\hermes.web\bin\System.Web.Routing.dll
+C:\Documents and Settings\Zach Young\My Documents\Visual Studio 2008\Projects\hermesreader\hermes.web\bin\hermes.core.pdb
+C:\Documents and Settings\Zach Young\My Documents\Visual Studio 2008\Projects\hermesreader\hermes.web\obj\Debug\hermes.web.dll
+C:\Documents and Settings\Zach Young\My Documents\Visual Studio 2008\Projects\hermesreader\hermes.web\obj\Debug\hermes.web.pdb
