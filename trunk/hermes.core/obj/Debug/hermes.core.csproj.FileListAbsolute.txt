@@ -1,0 +1,10 @@
+C:\Documents and Settings\Zach Young\My Documents\Visual Studio 2008\Projects\hermes\hermes.core\bin\Debug\hermes.core.dll
+C:\Documents and Settings\Zach Young\My Documents\Visual Studio 2008\Projects\hermes\hermes.core\bin\Debug\hermes.core.pdb
+C:\Documents and Settings\Zach Young\My Documents\Visual Studio 2008\Projects\hermes\hermes.core\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Zach Young\My Documents\Visual Studio 2008\Projects\hermes\hermes.core\obj\Debug\hermes.core.dll
+C:\Documents and Settings\Zach Young\My Documents\Visual Studio 2008\Projects\hermes\hermes.core\obj\Debug\hermes.core.pdb
+C:\Documents and Settings\Zach Young\My Documents\Visual Studio 2008\Projects\hermesreader\hermes.core\bin\Debug\hermes.core.dll
+C:\Documents and Settings\Zach Young\My Documents\Visual Studio 2008\Projects\hermesreader\hermes.core\bin\Debug\hermes.core.pdb
+C:\Documents and Settings\Zach Young\My Documents\Visual Studio 2008\Projects\hermesreader\hermes.core\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Zach Young\My Documents\Visual Studio 2008\Projects\hermesreader\hermes.core\obj\Debug\hermes.core.dll
+C:\Documents and Settings\Zach Young\My Documents\Visual Studio 2008\Projects\hermesreader\hermes.core\obj\Debug\hermes.core.pdb
