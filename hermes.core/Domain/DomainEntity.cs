@@ -1,10 +1,10 @@
 using System;
+using FluentNHibernate.Framework;
 
 namespace hermes.core.Domain
 {
-    public abstract class DomainEntity
+    public abstract class DomainEntity : Entity
     {
-        public long Id { get; set; }
         public DateTime? CreateDate { get; set; }
         public DateTime? ModifiedDate { get; set; }
 
